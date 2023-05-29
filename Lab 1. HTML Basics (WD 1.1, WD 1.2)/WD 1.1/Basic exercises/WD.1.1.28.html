@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Ссылка для прокрутки вниз и возврата к началу страницы</title>
+  <style>
+    .scroll-link {
+      position: fixed;
+      top: 20px;
+      right: 20px;
+    }
+
+    .scroll-to-top {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+    }
+  </style>
+  <script>
+    function scrollToBottom() {
+      window.scrollTo(0, document.body.scrollHeight);
+    }
+
+    function scrollToTop() {
+      window.scrollTo(0, 0);
+    }
+  </script>
+</head>
+<body>
+  <a href="#" class="scroll-link" onclick="scrollToBottom(); return false;">Прокрутить вниз</a>
+
+ <p1>а<br>а<br>а<br>а<br>а<br>а<br>а<br>а<br>а<br>а<br>а<br>а<br>а<br>а<br>а<br>а<br>а<br>а<br>а<br>а<br>а<br>а<br>а<br>а<br>а<br>а<br>а<br>а<br>а<br>а<br>а<br>а<br>а<br>а<br>а<br>а<br>а<br>а<br>а<br>а<br>а<br>а<br>а<br>а<br>а<br>а<br>а<br>а<br>а<br>а<br>а<br>а<br>а<br>а<br>а<br>а<br>а<br>а<br>а<br>а<br>а<br>а<br>а<br>а<br>а<br>а<br>а<br>а<br>а<br>а<br>а<br>а<br>а<br>а<br>а<br>а<br>а<br>а<br>а<br>а<br>а<br>а<br>а<br>а<br>а<br>а<br>а<br>а<br>а<br>а<br>а<br>а<br>а<br>а<br>а<br>а<br>а<br>а<br>а<br>а<br>а<br>а<br>а<br>а<br>а<br>а<br>а<br>а<br>а<br>а<br>а<br>а<br>а<br>а<br>а<br>а<br>а<br>а<br>а<br>а<br>а<br>а<br>а<br>а<br>а<br>а<br>а<br>а<br>а<br>а<br>а<br>а<br>а<br>а<br>а<br>а<br>а<br>а<br>а<br>а<br>а<br>а<br>а<br>а<br>а<br>а<br>а<br>а<br>а<br>а<br>а<br>а<br>а<br>а<br>а<br>а<br>а<br>а<br>а<br>а<br>а<br>а<br>а<br>а<br>а<br>а<br>а<br>а<br>а<br>а<br>а<br>а<br>а<br>а<br>а<br>а<br>а<br>а<br>а<br>а<br>а<br>а<br>а<br>а<br>а<br>а<br>а<br>а<br>а<br>а<br>а<br>а<br>а<br>а<br>а<br>а<br>а<br>а<br>а<br>а<br>а<br>
+
+  <a href="#" class="scroll-to-top" onclick="scrollToTop(); return false;">Вернуться наверх</a>
+</body>
+</html>
+
+
