@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8" />
+  <title>Формы в React</title>
+</head>
+<body>
+<div id="app"></div>
+
+<script crossorigin src="https://unpkg.com/react@16/umd/react.production.min.js"></script>
+<script crossorigin src="https://unpkg.com/react-dom@16/umd/react-dom.production.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/babel-standalone/6.25.0/babel.min.js"></script>
+
+<script type="text/babel">
+  class UserForm extends React.Component {
+    constructor(props) {
+      super(props);
+      var name = props.name;
+      var nameIsValid = this.validateName(name);
+      var age = props.age;
+      var ageIsValid = this.validateAge(age);
+      this.state = { name: name, age: age, nameValid: nameIsValid, ageValid: ageIsValid };
+
+      this.nameField = React.createRef();
+      this.ageField = React.createRef();
+
+      this.handleSubmit = this.handleSubmit.bind(this);
+    }
+
+    validateAge(age) {
+      return age >= 0;
+    }
+
+    validateName(name) {
+      return name.length > 2;
+    }
+
+    handleSubmit(e) {
+      e.preventDefault();
+      var name = this.nameField.current.value;
+      var age = this.ageField.current.value;
+      var nameValid = this.validateName(name);
+      var ageValid = this.validateAge(age);
+      this.setState({ name: name, age: age, nameValid: nameValid, ageValid: ageValid });
+
+      if (nameValid && ageValid) {
+        alert("Имя: " + name + " Возраст: " + age);
+      }
+    }
+
+    render() {
+      var nameColor = this.state.nameValid ? "green" : "red";
+      var ageColor = this.state.ageValid ? "green" : "red";
+      return (
+              <form onSubmit={this.handleSubmit}>
+                <p>
+                  <label>Имя:</label>
+                  <br />
+                  <input type="text" value={this.state.name} ref={this.nameField} style={{ borderColor: nameColor }} />
+                </p>
+                <p>
+                  <label>Возраст:</label>
+                  <br />
+                  <input type="number" value={this.state.age} ref={this.ageField} style={{ borderColor: ageColor }} />
+                </p>
+                <input type="submit" value="Отправить" />
+              </form>
+      );
+    }
+  }
+
+  ReactDOM.render(<UserForm name="" age="0" />, document.getElementById("app"));
+
+</script>
+</body>
+</html>
+
