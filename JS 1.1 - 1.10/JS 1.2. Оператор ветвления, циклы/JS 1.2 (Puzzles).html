@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <script>
+        var count_answers = 0;
+
+        var answer1 = prompt("Я летаю без крыльев, кричу без голоса, падаю без того, чтобы упасть. Что я?");
+        if (answer1.toLowerCase() === "облако") {
+            alert('Верно :)');
+            count_answers += 1;
+        } else {
+            alert('Неверно :(');
+        }
+
+        var answer2 = prompt("Зимой и летом одним цветом");
+        if (answer2.toLowerCase() === "елка") {
+            alert('Верно :)');
+            count_answers += 1;
+        } else {
+            alert('Неверно :(');
+        }
+
+        alert("Правильных ответов:" + count_answers);
+
+    </script>
+    <title>
+      Puzzles
+    </title>
+</head>
+<body>
+</body>
+</html>

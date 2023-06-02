@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <script>
+      var surname = prompt("Введите фамилию:");
+      var lowerCaseSurname = surname.toLowerCase();
+      var reversedSurname = lowerCaseSurname.split("").reverse().join("");
+
+      if (lowerCaseSurname === reversedSurname) {
+        alert("Фамилия " + surname + " является палиндромом.");
+      } else {
+        alert("Фамилия " + surname + " не является палиндромом.");
+      }
+    </script>
+    <title>Palindrome</title>
+</head>
+<body>
+
+</body>
+</html>

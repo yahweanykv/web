@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+  <script>
+    var arr = [];
+
+    for (var i = 0; i < 15; i++) {
+      arr.push(Math.floor(Math.random() * (30 - (-10) + 1)) + (-10));
+    }
+
+    var sum = 0;
+    var count = 0;
+
+    for (var i = 0; i < arr.length; i++) {
+      if (arr[i] > 0) {
+        sum += arr[i];
+        count++;
+      }
+    }
+
+    var average = sum / count;
+
+    alert("Массив: " + arr);
+    alert("Среднее арифметическое положительных элементов: " + average);
+
+  </script>
+    <title>Positive Average</title>
+</head>
+<body>
+
+</body>
+</html>

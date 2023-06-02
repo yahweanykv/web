@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+  <script>
+    var upperLimit = parseInt(prompt("Введите ваш порядковый номер:"));
+
+    alert("Простые числа до " + upperLimit + ":");
+
+    for (var number = 2; number <= upperLimit; number++) {
+      var isPrime = true;
+
+      for (var i = 2; i <= Math.sqrt(number); i++) {
+        if (number % i === 0) {
+          isPrime = false;
+          break;
+        }
+      }
+
+      if (isPrime) {
+        alert(number);
+      }
+    }
+
+  </script>
+    <title>Simple Numbers</title>
+</head>
+<body>
+
+</body>
+</html>
