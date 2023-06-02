@@ -1,0 +1,46 @@
+.app1-container {
+    font-family: sans-serif;
+    text-align: center;
+}
+
+.app1-heading {
+    font-family: roboto;
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.app1-description {
+    font-size: 18px;
+}
+
+.app2-container {
+    font-family: sans-serif;
+    text-align: left;
+}
+
+.app2-heading {
+    font-family: roboto;
+    font-size: 20px;
+    font-weight: bold;
+    text-decoration: line-through;
+    font-kerning: normal;
+}
+
+.app2-description {
+    font-size: 16px;
+    font-variant-ligatures: no-common-ligatures;
+}
+.app3-container {
+    font-family: sans-serif;
+    text-align: center;
+}
+
+.app3-input {
+    margin-bottom: 10px;
+}
+
+.app3-output {
+    font-size: 18px;
+    font-weight: bold;
+}
+
